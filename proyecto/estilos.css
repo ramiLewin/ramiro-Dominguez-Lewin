@@ -1,0 +1,209 @@
+/*configuracion general de la pagina*/
+*{
+    /*.l utilizamos para el responsive, servia la suma del ancho y relleno de los elementos*/
+    box-sizing: border-box;
+}
+
+html{
+    /*la pagina se mueve de forma lenta al bajar*/
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    /*margin: 0;*/
+}
+
+header{
+    background-color: rgba(255,240,201);
+}
+/*configuracion general de la navegacion "menu selectivo"*/
+header .logo{
+    margin: 0;/*margen*/
+    padding: 105px, 25px;/*relleno*/
+    font-weight: bold;/*negrita*/
+    font-size:30px;/*tamaño de fuente*/
+
+}
+header .contenedor-principal{
+    display:flex;/*contenido flexible*/
+    flex-direction: column; /*centremos los elementos*/
+    align-items: center;/*cemtremos los elementos*/
+
+}
+header a{
+    padding: 5px 12px;
+    text-decoration:none;
+    font-weight:bold;
+    color: black;
+}
+header a:hover{
+    color: #395780;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.contenedor-principal{
+    max-width: 1400px;/*tamaño maximo de la anchura*/
+    margin:auto;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 350px;
+    background-size: cover;/*no se estira*/
+}
+/*configuracion  del cuerpo del index*/
+#soy-aaa .contenedor-cuerpo{
+    text-align:center;
+    padding:80px 12px;
+    margin-top:-3%;
+}
+.texto p{
+    font-size: 20px;
+    line-height: 2;/*interlineado*/
+    margin-top: -20px;
+}
+/*configuracion general  de la pagina*/
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{font-size: none;}
+li{font-size: 1.25em;}
+.img-contenedor{
+    background-image: url("img/1.jpg");
+    background-size: cover;/*no se estire*/
+    background-position:center center;/*centrado de la imagen total*/
+    height: 300px;
+    width: 450px;
+    border-radius: 25px;
+}
+
+
+/*6-9-22, sector flexBox*/
+.sector-aaaa{
+    margin-top: -2%;    
+
+}
+
+.sector-aaaa h2{
+    margin-top: -1%;    
+    color: #395780;
+    margin-left:9%;
+    font-weight: bold; /*negrita*/
+    font-size:45px;
+    text-align: left;
+}
+.sector-aaaa img{
+    width: 370px;
+    height:350px;
+    margin-top: 10%;
+    margin-left: 15%;
+    border: 2px solid #395780;
+
+}
+
+.contenedor-foto{
+    display:flex;
+    flex-flow: row wrap;/*imagenes una al lado de la otra en forma de linea*/
+    justify-content: center;/*centrar*/
+    align-items: center;/*centramos*/
+    margin-top:1%;/*margen superior*/
+}
+
+.ultimo-aaa{
+    color: #395780;
+    text-align: center;
+    margin-top: 300%;
+}
+
+.galeria{
+    background-color: aliceblue;
+    width: 350px;
+    margin: 10px;
+    border: 2px solid #395780;
+    box-shadow: 2px 2px 2px 0 #395780; /*sombra*/
+    transition: all 1s; /*efecto despues de un segundo*/
+    transition: 1.3s ease-in-out;/*movimiento lento*/
+
+}
+.galeria :hover{
+    border: 3px solid #395780;
+    transform: scale(1.9);
+}
+
+.foto{
+    height: 200px;
+    background-color: cover;/*sin estirar*/
+}
+
+.autor{
+    text-transform: uppercase;
+    color: blueviolet;
+    padding: 15px;
+    text-align: center;
+}
+
+.foto1{
+    background-image: url(img/1.jpg);
+}
+.foto2{
+    background-image: url(img/2.PNG);
+}
+.foto3{
+    background-image: url(img/3.PNG);
+}
+
+/*keyframes*/
+/*responsive ->distintas pantallas*/
+@media(min-widht:850px){
+    header{
+        position: relative;/*pantalla por defecto, posicionada en la parte superior*/
+        width:100%;
+
+    }
+    header .contenedor-principal{
+        flex-direction:row;/*filas*/
+        justify-content:space-between;
+
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    .carousel-inner img{
+        width: 100%;
+        height: 600px;
+        background-size: cover;/*no se estira*/
+    }
+    /*6-9-22*/
+    #soy-aaa .contenedor-cuerpo{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #soy-aaa .texto{
+    width: 56%;
+    max-width: 600px;
+    padding-left: 30px;
+    display: flex;
+    text-align: initial;/*texto horizontal*/
+    flex-direction: column;
+    justify-content: center;
+    }
+    #soy-aaa h2{
+        margin-top: 0%;
+    }
+    #soy-aaa .img-contenedor{
+        background-image: url("img/1.jpg");
+        background-size: cover;/*no se estire*/
+        background-position:center center;/*centrado de la imagen total*/
+        height: 380px;
+        width: 600px;
+        border-radius: 25px;
+    }
+
+}

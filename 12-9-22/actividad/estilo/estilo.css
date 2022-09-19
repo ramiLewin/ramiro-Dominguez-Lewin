@@ -1,0 +1,33 @@
+.galeria-contenedor{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 150px;
+    padding:15px;
+    grid-gap:10px;
+}
+.galeria-imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center center;
+}
+
+.galeria-item{
+    position: relative;
+}
+.galeria-texto{
+    position: absolute;
+    bottom:0;
+    color: white;
+    font-size: 15px;
+    /*degradado de color*/
+    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+    width: 100%;
+    margin: 0;
+    padding:5px;
+}
+/*especifica el tamaño del grid especifico*/
+.galeria-item:nth-child(3){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}

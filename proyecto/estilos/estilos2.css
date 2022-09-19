@@ -1,0 +1,54 @@
+/*cuerpo general de la pagina*/
+html,body{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100vh;
+}
+
+.contenedor-principal{
+    width: 100%;
+    height: 80vh;/*ancho*/
+    overflow: hidden;
+    position: relative;
+    background-image:url("../img/1.PNG");
+    background-position:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    /*llamamos al keyframes*/
+    /*ease in out -> transicion mas lenta*/
+    animation: navarro 20s infinite ease-in-out;
+    
+
+}
+.contenedor{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%W);
+    text-transform: uppercase;
+
+}
+
+@keyframes navarro{
+    0%{
+        background-image: url("../img/1.jpg");
+    }
+    15%{
+        background-image: url("../img/2.PNG");
+    }
+    30%{
+        background-image: url("../img/3.PNG");
+    }
+    45%{
+        background-image: url("../img/4.PNG");
+    }
+    75%{
+        background-image: url("../img/5.PNG");
+    }
+    90%{
+        background-image: url("../img/6.PNG");
+    }
+}
